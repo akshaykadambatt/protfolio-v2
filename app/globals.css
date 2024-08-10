@@ -16,18 +16,39 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .box {
+    @apply container mx-auto px-[7%];
+  }
+}
+
+.hamburger {
+  @apply flex items-center justify-center w-[66px] h-[66px] bg-gray-200 relative rounded-full transition-all duration-200;
+}
+
+.hamburger:hover {
+  @apply bg-gray-300;
+}
+
+.hamburger-lines {
+  height: 4px;
+  width: 37px;
+  background-color: black;
+  border-radius: 6px;
+  position: relative;
+  top: -5px;
+}
+
+.hamburger-lines::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 36px;
+  top: 11px;
+  left: 1px;
+  background-color: black;
+  border-radius: 6px;
 }
