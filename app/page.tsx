@@ -91,27 +91,13 @@ export default function Home() {
       <section className="w-full block py-[100px] box relative">
         <h2
           className={
-            dotgothic.className + " text-[70px] leading-none mb-[100px]"
+            dotgothic.className + " text-[70px] leading-none mb-[10vh]"
           }
         >
           Works
         </h2>
-        <p>2024</p>
-        <h3 className="text-3xl font-medium">Designer Portfolio</h3>
-        <Image
-          src="/image.png"
-          alt="Designer Portfolio Preview"
-          width={500}
-          height={400}
-          className="mt-[20px]"
-          sizes="(max-width: 768px) 100vw, 33vw"
-        />
-        <button className="  py-2 px-4 rounded-lg mt-4">
-            View Project{" "}
-            <IoIosArrowRoundForward className="icon inline-block" size="30" />
-          </button>
-        <div className="slider mb-[1000px]">
-        <Slider/>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-9">
+          <Slider />
         </div>
       </section>
     </main>
