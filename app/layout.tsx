@@ -7,8 +7,17 @@ const mada = Mada({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Akshay Kadambatt | Creative Developer",
-  description: "Portfolio of Akshay Kadambatt, a skilled Front-End Developer with a passion for Machine Learning and backend development. Check out my projects and get in touch!",
-  keywords: ["Akshay Kadambatt", "Front-End Developer", "Machine Learning", "Backend Development", "Portfolio", "Projects", "React"],
+  description:
+    "Portfolio of Akshay Kadambatt, a skilled Front-End Developer with a passion for Machine Learning and backend development. Check out my projects and get in touch!",
+  keywords: [
+    "Akshay Kadambatt",
+    "Front-End Developer",
+    "Machine Learning",
+    "Backend Development",
+    "Portfolio",
+    "Projects",
+    "React",
+  ],
   authors: [{ name: "Akshay Kadambatt", url: "https://akshaykadambatt.com" }],
   creator: "Akshay Kadambatt",
   publisher: "Akshay Kadambatt",
