@@ -17,7 +17,7 @@ const experiences = [
     title: "Software Engineer",
     company: "Software For Love (UW), Waterloo, ON",
     description:
-      "A lot has changed since then. Back when I was playing around, we had flat designs and cool gradients. I still remember thinking GSAP is the key to fulfillment. I wish I could go back and tell that boy to calm down.",
+      "I worked on building responsive web apps with React and Next.js, ensuring everything looked good on all devices. I also automated deployments and led a small team, which really sped things up and improved our workflow.",
     image: "/experience1.png",
   },
   {
@@ -25,7 +25,7 @@ const experiences = [
     title: "Full Stack Developer",
     company: "Ecesis, IN",
     description:
-      "A lot has changed since then. Back when I was playing around, we had flat designs and cool gradients. I still remember thinking GSAP is the key to fulfillment. I wish I could go back and tell that boy to calm down.",
+      "I developed full-stack applications using the MERN stack, focusing on creating smooth and user-friendly interfaces. Collaborated closely with designers and optimized backend processes, which made our apps faster and more scalable.",
     image: "/experience2.png",
   },
   {
@@ -33,7 +33,7 @@ const experiences = [
     title: "Associate Software Developer",
     company: "Spawoz, IN",
     description:
-      "A lot has changed since then. Back when I was playing around, we had flat designs and cool gradients. I still remember thinking GSAP is the key to fulfillment. I wish I could go back and tell that boy to calm down.",
+      "I helped develop web apps using Angular and Laravel, making sure they worked well across different devices. I also pitched in to resolve bugs and improve existing features, which cut down our open tickets significantly",
     image: "/experience3.png",
   },
   {
@@ -41,7 +41,7 @@ const experiences = [
     title: "Bachelors in Computer Science & Engineering",
     company: "Kalam Technical University",
     description:
-      "A lot has changed since then. Back when I was playing around, we had flat designs and cool gradients. I still remember thinking GSAP is the key to fulfillment. I wish I could go back and tell that boy to calm down.",
+      "Graduated with a strong grasp of programming and computer science fundamentals. Built several projects, including full-stack web apps, and participated in hackathons to sharpen my coding skills.",
     image: "/experience4.png",
   },
 ];
@@ -49,6 +49,11 @@ export default function Home() {
   return (
     <main className="">
       <section className="box mb-[100px] mt-[100px]">
+        <InViewWrapper>
+        <div  className={`${dotgothic.className} arstreik absolute top-[0px] right-[-0px] opacity-50`}>
+          DESIGN & DEVELOPMENT
+          </div>
+        </InViewWrapper>
         <InViewWrapper>
           <p className="text-[27px]">On the web since</p>
         </InViewWrapper>
@@ -108,7 +113,7 @@ export default function Home() {
           </div>
         </InViewWrapper>
       </section>
-      <section className="w-full gradient-background text-white  block overflow-hidden">
+      <section className="w-full gradient-background text-white  block overflow-hidden relative z-10">
         <div className="box p-[100px]">
           <div className="animated-section relative h-[40vh]">
             <div className="gradient-bg gradient-1"></div>
@@ -117,7 +122,7 @@ export default function Home() {
             <div className="gradient-bg gradient-4"></div>
           </div>
           <InViewWrapper>
-            <p className="text-[27px] mb-4">
+            <p className={"text-[27px] mb-4"}>
               Always loved to build, still love to build.
             </p>
           </InViewWrapper>
@@ -147,7 +152,7 @@ export default function Home() {
           <Slider />
         </div>
       </section>
-      <section className="w-full block py-[100px] box relative" id="experience">
+      <section className="w-full block py-[100px] box relative mb-[100px]" id="experience">
         <InViewWrapper>
           <h2
             className={`${dotgothic.className} text-[70px] leading-none mb-[10vh]`}
@@ -164,7 +169,7 @@ export default function Home() {
               <div>
                 <InViewWrapper>
                   <h3
-                    className={`${dotgothic.className} text-[50px] mb-2 font-bold`}
+                    className={`${dotgothic.className} lines text-[50px] mb-2 font-bold`}
                   >
                     {experience.year}
                   </h3>

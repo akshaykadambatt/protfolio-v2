@@ -31,10 +31,15 @@ html {
 }
 
 .hamburger {
-  @apply flex items-center justify-center w-[66px] h-[66px] bg-gray-200 relative rounded-full;
+  @apply flex items-center justify-center w-[66px] h-[66px] relative rounded-full;
   box-shadow: 0 0 0px 0px #7c0000;
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
     box-shadow 0.63s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.logo-change{
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform:translateY(-20px);
 }
 
 .hamburger:hover {
@@ -294,7 +299,7 @@ body {
 }
 .scene {
   width: 340px;
-  height: 200px;
+  height: 250px;
   perspective: 700px;
   position: relative;
 }
@@ -352,4 +357,52 @@ body {
 .experience-item:nth-child(4) .experience-image {
   transform: rotate(-20deg) translateY(0px) translatex(90px);
   height: 200px;
+}
+
+.arstreik {
+  right: 0;
+  width: fit-content;
+  text-wrap: nowrap;
+  background: #f2f2f2;
+  transform: rotate(45deg) translatey(-620px);
+  animation: move 195s linear infinite reverse;
+  opacity: .41;
+  color:#000000;
+  font-size: 170px;
+  padding-inline: 700px;
+  top:-100vh;
+}
+
+
+@-webkit-keyframes move {
+  0% {
+    transform: rotate(45deg) translatex(-0%) translatey(-420px);
+    opacity: 0;
+  }
+  .041% {
+    transform: rotate(45deg) translatex(0%) translatey(-30vw);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) translatex(70%) translatey(-30vw);
+    opacity: 1;
+  }
+}
+
+.lines::before {
+  content: '';
+  height: 100%;
+  background: #04040424;
+  width: 1px;
+  display: block;
+  position: absolute;
+  top: 76px;
+  left: 45px;
+}
+
+.experience-item:last-child .lines::before {
+  display: none;
+}
+.experience-item .in-view{
+  height: 70%;
 }

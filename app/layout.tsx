@@ -79,7 +79,7 @@ export default function RootLayout({
                 <a href="tel:+16479287053" className="mb-2 hover:underline">
                   +1 (647) 928-7053
                 </a>
-                <a href="#" className="hover:underline">
+                <a href="/Akshay-resume.pdf" download="Akshay-Resume.pdf" className="hover:underline">
                   Download my resume
                 </a>
               </div>
