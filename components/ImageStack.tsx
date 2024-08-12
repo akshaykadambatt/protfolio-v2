@@ -6,12 +6,18 @@ import "../app/globals.css";
 import { useKeenSlider, KeenSliderPlugin } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import InViewWrapper from "./InViewWrapper";
 
 const carousel: KeenSliderPlugin = (slider) => {
-  let z = 700;
+  let z = 600;
   function rotate() {
     const deg = 360 * slider.track.details.progress;
     slider.container.style.transform = `translateZ(-${z}px) rotateY(${-deg}deg) translateY(170px) `;
+    slider.slides.forEach((element, idx) => {
+      element.style.filter = `${
+        Math.max(0, Math.min(5, 5 - Math.abs(z / 100))) * 100
+      }px`;
+    });
   }
   slider.on("created", () => {
     const deg = 360 / slider.slides.length;
@@ -31,11 +37,9 @@ export default function Slider() {
       selector: ".carousel__cell",
       renderMode: "custom",
       mode: "free-snap",
+      dragSpeed: 0.3,
       defaultAnimation: {
         duration: 100000,
-      },
-      slides: {
-        perView: 1,
       },
       slideChanged(slider) {
         setActiveSlide(slider.track.details.rel);
@@ -121,14 +125,16 @@ export default function Slider() {
               <div className="carousel keen-slider" ref={sliderRef}>
                 {slides.map((slide, index) => (
                   <div key={index} className="carousel__cell number-slide1 ">
-                    <Image
-                      src={slide.img}
-                      alt={slide.name}
-                      width={500}
-                      height={400}
-                      className="fade-up mt-[20px] "
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
+                    <InViewWrapper additionalClass="slider-image">
+                      <Image
+                        src={slide.img}
+                        alt={slide.name}
+                        width={500}
+                        height={400}
+                        className="fade-up mt-[20px] "
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </InViewWrapper>
                   </div>
                 ))}
               </div>
@@ -157,20 +163,28 @@ interface ImageProps {
 const SelectedImage: React.FC<ImageProps> = ({ year, name, img, link }) => {
   return (
     <div className="">
-      <p>{year}</p>
-      <h3 className="text-3xl font-medium">{name}</h3>
-      <Image
-        src={img}
-        alt={`${name} Preview`}
-        width={400}
-        height={400}
-        className="mt-[20px] rounded-sm overflow-hidden"
-        sizes="(max-width: 768px) 100vw, 33vw"
-      />
-      <button className="py-2 px-4 rounded-lg mt-4">
-        View Project{" "}
-        <IoIosArrowRoundForward className="icon inline-block" size="30" />
-      </button>
+      <InViewWrapper>
+        <p>{year}</p>
+      </InViewWrapper>
+      <InViewWrapper>
+        <h3 className="text-3xl font-medium">{name}</h3>
+      </InViewWrapper>
+      <InViewWrapper>
+        <Image
+          src={img}
+          alt={`${name} Preview`}
+          width={400}
+          height={400}
+          className="mt-[20px] rounded-md overflow-hidden"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      </InViewWrapper>
+      <InViewWrapper>
+        <button className="py-2 px-4 rounded-lg mt-4">
+          View Project{" "}
+          <IoIosArrowRoundForward className="icon inline-block" size="30" />
+        </button>
+      </InViewWrapper>
     </div>
   );
 };

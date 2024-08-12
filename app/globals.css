@@ -25,6 +25,11 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 .hamburger {
   @apply flex items-center justify-center w-[66px] h-[66px] bg-gray-200 relative rounded-full;
   box-shadow: 0 0 0px 0px #7c0000;
@@ -90,6 +95,28 @@
   animation: fade-up 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
   transform: matrix3d(1, 0, 0, -0.0003, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
+.not-in-view{
+  opacity: 0;
+}
+.in-view {
+  animation: fade-up 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s 1 forwards;
+}
+
+.in-view:nth-child(1), .slider-image:nth-child(1) {
+  animation-delay: 0s;
+}
+.in-view:nth-child(2), .slider-image:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.in-view:nth-child(3), .slider-image:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.in-view:nth-child(4), .slider-image:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.in-view:nth-child(5), .slider-image:nth-child(5) {
+  animation-delay: 0.4s;
+}
 
 @-webkit-keyframes fade-up {
   0% {
@@ -98,7 +125,7 @@
       matrix3d(1, 0, 0, 0, 0, 1, 0, 0.0003, 0, 0, 1, 0, 0, 0, 0, 1);
     transform-origin: top;
   }
-  20% {
+  0% {
     opacity: 0;
     transform: translateY(80px) scale(0.97)
       matrix3d(1, 0, 0, 0, 0, 1, 0, 0.0003, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -146,10 +173,10 @@ button.btn:hover .icon {
 }
 
 .change:nth-child(2) div {
-  animation: flip 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
+  animation: flip 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) .53s 1 forwards;
 }
 .change:nth-child(3) div {
-  animation: flip 3.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
+  animation: flip 3.8s cubic-bezier(0.075, 0.82, 0.165, 1) .53s 1 forwards;
 }
 @keyframes flip {
   0% {
@@ -263,6 +290,7 @@ body {
   display: flex;
   justify-content: center;
   position: absolute;
+  transform: rotate3d(5, 3, 2, 12deg) scale(1.2);
 }
 .scene {
   width: 340px;
@@ -277,12 +305,17 @@ body {
   position: absolute;
   transform-style: preserve-3d;
 }
-.carousel__cell {
+.carousel__cell:active {
+  cursor: grabbing;
+
+}
+  .carousel__cell {
   position: absolute;
   width: 340px;
   left: 10px;
   top:0px;
   transition: all .73s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor:grab;
 }
 .carousel__cell img {
   box-shadow: 5px 1px 53px 0px #3f3f3f1c;
@@ -292,4 +325,31 @@ body {
 }
 .carousel__cell:hover {
   top:-20px;
+}
+
+.experience-image {
+  position: absolute;
+  object-fit: cover;
+  width: 80%;
+  border-radius: 7px;
+  box-shadow: 5px 1px 53px 0px #3f3f3f1c;
+}
+
+.experience-item:nth-child(1) .experience-image {
+  transform: rotate(10deg) translateY(-70px) translatex(90px);
+  height: 200px;
+  z-index: 14;
+}
+.experience-item:nth-child(2) .experience-image {
+  transform: rotate(-13deg) translateY(-50px) translatex(90px);
+  height: 250px;
+  z-index: 3;
+}
+.experience-item:nth-child(3) .experience-image {
+  transform: rotate(3deg) translateY(-50px) translatex(90px);
+  height: 300px;
+}
+.experience-item:nth-child(4) .experience-image {
+  transform: rotate(-20deg) translateY(0px) translatex(90px);
+  height: 200px;
 }

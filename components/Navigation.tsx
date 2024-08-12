@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { DotGothic16 } from "next/font/google";
+import InViewWrapper from "./InViewWrapper";
 const dotgothic = DotGothic16({
   weight: "400",
   subsets: ["latin"],
@@ -26,21 +27,31 @@ export default function Navigation() {
       </header>
       {isMenuOpen && (
         <nav className="fixed top-[20%] left-0 w-full h-full text-white z-50">
-          <div className={dotgothic.className + " text-[42px] decorative-text fade-up"}>akshay</div>
+        <InViewWrapper>
+          <div className={dotgothic.className + " text-[42px] decorative-text"}>akshay</div>
+        </InViewWrapper>
           <ul className="flex flex-col items-center space-y-9 text-7xl">
-            <li className="fade-up menu-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <InViewWrapper>
+        <li className="menu-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <Link href="/">Home</Link>
             </li>
-            <li className="fade-up menu-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <Link href="/projects">Projects</Link>
+        </InViewWrapper>
+        <InViewWrapper>
+        <li className="menu-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Link href="#works">Projects</Link>
             </li>
-            <li className="fade-up menu-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <Link href="/about">About</Link>
+        </InViewWrapper>
+        <InViewWrapper>
+        <li className="menu-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Link href="#experience">Experience</Link>
             </li>
-            <li className="fade-up menu-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <Link href="/contact">Contact</Link>
+        </InViewWrapper>
+        <InViewWrapper>
+        <li className="menu-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Link href="/contact">My Resume</Link>
             </li>
-          </ul>
+        </InViewWrapper>
+        </ul>
         </nav>
       )}
     </>
