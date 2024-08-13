@@ -30,6 +30,9 @@ html {
   overflow-x: hidden;
   width:100vw;
 }
+main {
+  width: 100vw;
+  overflow-x: hidden;}
 
 .hamburger {
   @apply flex items-center justify-center w-[66px] h-[66px] relative rounded-full;
