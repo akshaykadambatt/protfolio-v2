@@ -21,18 +21,15 @@
     text-wrap: balance;
   }
   .box {
-    @apply container mx-auto px-[7%] overflow-hidden;
+    @apply container mx-auto px-[7%];
   }
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  width:100vw;
 }
-main {
-  width: 100vw;
-  overflow-x: hidden;}
+
 
 .hamburger {
   @apply flex items-center justify-center w-[66px] h-[66px] relative rounded-full;
@@ -95,6 +92,7 @@ main{
 }
 
 .decorative-text {
+  @apply hidden md:block;
   font-size: 160px;
   left: 0;
   top: 3vh;
@@ -444,7 +442,7 @@ body {
   }
 }
 .marquee {
-  @apply h-[160px] md:h-[255px];
+  @apply h-[160px] md:h-[255px] hidden md:block;
   overflow: hidden;
   width: 300%;
   transform: rotate(45deg) translate(30%, -75vw);
