@@ -458,11 +458,11 @@ body {
 }
 
 .lines::before {
+  @apply hidden md:visible md:block;
   content: "";
   height: 100%;
   background: #04040424;
   width: 1px;
-  display: block;
   position: absolute;
   top: 76px;
   left: 45px;

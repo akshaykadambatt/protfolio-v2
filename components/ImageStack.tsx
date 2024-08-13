@@ -127,6 +127,7 @@ export default function Slider() {
                   <div key={index} className="carousel__cell number-slide1 ">
                     <InViewWrapper additionalClass="slider-image">
                       <Image
+                        loading="eager"
                         src={slide.img}
                         alt={slide.name}
                         width={500}
