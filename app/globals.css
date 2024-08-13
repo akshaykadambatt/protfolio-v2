@@ -107,6 +107,16 @@ html {
   animation: fade-up 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s 1 forwards;
 }
 
+@media (max-width: 768px) {
+  .not-in-view {
+    opacity: 1;
+  }
+  .in-view {
+    opacity: 1;
+    animation: none;
+  }
+}
+
 .in-view:nth-child(1),
 .slider-image:nth-child(1) {
   @apply transition-opacity duration-[1.6s];
