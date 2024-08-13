@@ -170,11 +170,11 @@ button.btn:hover .icon {
   transform: scale(1.4);
   opacity: 0.9;
 }
-.change:nth-child(2) div {
-  animation: flip 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) .53s 1 forwards;
+.in-view .change:nth-child(2) div {
+  animation: flip 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
 }
-.change:nth-child(3) div {
-  animation: flip 3.8s cubic-bezier(0.075, 0.82, 0.165, 1) .53s 1 forwards;
+.in-view .change:nth-child(3) div {
+  animation: flip 3.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 forwards;
 }
 @keyframes flip {
   0% {

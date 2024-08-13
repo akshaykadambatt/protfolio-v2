@@ -22,7 +22,7 @@ const experiences = [
   },
   {
     year: "2022",
-    title: "Full Stack Developer",
+    title: "Full Stack Web Designer",
     company: "Ecesis, IN",
     description:
       "I developed full-stack applications using the MERN stack, focusing on creating smooth and user-friendly interfaces. Collaborated closely with designers and optimized backend processes, which made our apps faster and more scalable.",
@@ -30,10 +30,10 @@ const experiences = [
   },
   {
     year: "2020",
-    title: "Associate Software Developer",
+    title: "Web Developer",
     company: "Spawoz, IN",
     description:
-      "I helped develop web apps using Angular and Laravel, making sure they worked well across different devices. I also pitched in to resolve bugs and improve existing features, which cut down our open tickets significantly",
+      "I helped develop web apps using React and Laravel, making sure they worked well across different devices. I also pitched in to resolve bugs and improve existing features, which cut down our open tickets significantly",
     image: "/experience3.png",
   },
   {
@@ -61,7 +61,7 @@ export default function Home() {
         </InViewWrapper>
         <InViewWrapper>
           <div
-            className={dotgothic.className + " text-[140px] md:text-[200px] leading-none mb-8"}
+            className={dotgothic.className + " text-[140px] md:text-[200px] leading-none mb-10"}
           >
             <div className="inline-block text-red-500">20</div>
             <div className=" inline-block change h-[131px] md:h-[194px] overflow-hidden relative top-[7px]">
@@ -104,16 +104,23 @@ export default function Home() {
           
         </InViewWrapper>
 
-        <InViewWrapper>
           <div className={mono.className + " text-xs flex justify-end mt-[7%]"}>
+        <InViewWrapper>
             <p className="bg-yellow-100 px-3 mr-1 py-1 inline-block">
               Akshay Kadambatt
             </p>
+        </InViewWrapper>
+        <InViewWrapper>
+        <a
+                  href="mailto:akshayakn6@gmail.com"
+                  className="mb-2 hover:underline"
+                >
             <p className="bg-gray-100 px-3 mr-2 py-1 inline-block">
               akshayakn6@gmail.com
             </p>
-          </div>
+            </a>
         </InViewWrapper>
+          </div>
       </section>
       <section className="w-full gradient-background text-white  block overflow-hidden relative z-10">
         <div className="box p-[100px]">
