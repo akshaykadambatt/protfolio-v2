@@ -109,22 +109,27 @@ html {
 
 .in-view:nth-child(1),
 .slider-image:nth-child(1) {
+  @apply transition-opacity duration-[1.6s];
   animation-delay: 0s;
 }
 .in-view:nth-child(2),
 .slider-image:nth-child(2) {
+  @apply transition-opacity duration-[1.6s];
   animation-delay: 0.1s;
 }
 .in-view:nth-child(3),
 .slider-image:nth-child(3) {
+  @apply transition-opacity duration-[1.6s];
   animation-delay: 0.2s;
 }
 .in-view:nth-child(4),
 .slider-image:nth-child(4) {
+  @apply transition-opacity duration-[2.6s];
   animation-delay: 0.3s;
 }
 .in-view:nth-child(5),
 .slider-image:nth-child(5) {
+  @apply transition-opacity duration-[3.5s];
   animation-delay: 0.4s;
 }
 

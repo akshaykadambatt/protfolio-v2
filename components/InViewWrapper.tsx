@@ -35,7 +35,7 @@ const InViewWrapper: React.FC<InViewWrapperProps> = ({ children, additionalClass
   return (
     <div
       ref={elementRef}
-      className={`${additionalClass} ${isInView ? 'in-view' : 'not-in-view'} transition-opacity duration-[10s] ease-in-out`}
+      className={`${additionalClass} ${isInView ? 'in-view' : 'not-in-view'}  ease-in-out`}
     >
       {children}
     </div>
