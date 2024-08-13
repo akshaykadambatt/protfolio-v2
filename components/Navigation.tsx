@@ -32,7 +32,7 @@ export default function Navigation() {
 
   return (
     <>
-      <header className="box flex justify-between items-center p-4 pt-9 sticky top-[0] z-[50]">
+      <header className={`${isMenuOpen && "hamburger-opened"} box flex justify-between items-center p-4 pt-9 sticky top-[0] z-[50]`}>
         <Link href="/" className={`${dotgothic.className} text-[42px] px-4 rounded-lg box-border transition-all ${scrolled && "opacity-0 logo-change bg-white/60 backdrop-blur-sm"}`}>
           akshay
         </Link>
