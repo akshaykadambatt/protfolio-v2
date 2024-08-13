@@ -119,7 +119,7 @@ export default function Slider() {
   return (
     <>
       <div className="p-4">
-        <div className="slider mb-[500px] mt-[-50px] ml-[-100px]">
+        <div className="slider mb-[350px] mt-[-150px] md:mb-[500px] md:mt-[-50px] md:ml-[-100px]">
           <div className="wrapper">
             <div className="scene">
               <div className="carousel keen-slider" ref={sliderRef}>

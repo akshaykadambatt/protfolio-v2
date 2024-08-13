@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={mada.className}>
         <Navigation />
         {children}
-        <footer className="w-full py-16 bg-black text-white">
+        <footer className="w-full py-16 px-16 bg-black text-white">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between">
             <div className="mb-8 md:mb-0">
               <h3 className={`${dotgothic.className} text-4xl font-bold mb-4`}>

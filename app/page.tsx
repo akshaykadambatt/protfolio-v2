@@ -47,11 +47,13 @@ const experiences = [
 ];
 export default function Home() {
   return (
-    <main className="">
-      <section className="box mb-[100px] mt-[100px]">
+    <main className="overflow-visible">
+      <section className="box pb-[100px] pt-[100px]">
         <InViewWrapper>
-        <div  className={`${dotgothic.className} arstreik absolute top-[0px] right-[-0px] opacity-50`}>
-          DESIGN & DEVELOPMENT
+        <div  className={`${dotgothic.className} marquee absolute top-[0px] right-[-0px] `}>
+          <div className="marquee-inner">
+          * DESIGN & DEVELOPMENT *
+          </div>
           </div>
         </InViewWrapper>
         <InViewWrapper>
@@ -59,10 +61,10 @@ export default function Home() {
         </InViewWrapper>
         <InViewWrapper>
           <div
-            className={dotgothic.className + " text-[200px] leading-none mb-8"}
+            className={dotgothic.className + " text-[140px] md:text-[200px] leading-none mb-8"}
           >
             <div className="inline-block text-red-500">20</div>
-            <div className=" inline-block change">
+            <div className=" inline-block change h-[131px] md:h-[194px] overflow-hidden relative top-[7px]">
               <div className="block">6</div>
               <div className="block">7</div>
               <div className="block">8</div>
@@ -71,7 +73,7 @@ export default function Home() {
               <div className="block">1</div>
               <div className="block">7</div>
             </div>
-            <div className=" inline-block change">
+            <div className=" inline-block change h-[131px] md:h-[194px] overflow-hidden relative top-[7px]">
               <div className="block">1</div>
               <div className="block">2</div>
               <div className="block">3</div>
@@ -115,12 +117,15 @@ export default function Home() {
       </section>
       <section className="w-full gradient-background text-white  block overflow-hidden relative z-10">
         <div className="box p-[100px]">
+          <InViewWrapper>
           <div className="animated-section relative h-[40vh]">
             <div className="gradient-bg gradient-1"></div>
             <div className="gradient-bg gradient-2"></div>
             <div className="gradient-bg gradient-3"></div>
             <div className="gradient-bg gradient-4"></div>
           </div>
+
+          </InViewWrapper>
           <InViewWrapper>
             <p className={"text-[27px] mb-4"}>
               Always loved to build, still love to build.
@@ -138,11 +143,11 @@ export default function Home() {
           </InViewWrapper>
         </div>
       </section>
-      <section className="w-full block py-[100px] box relative" id="works">
+      <section className="w-full block pt-[200px] pb-[70px] md:py-[100px] box relative" id="works">
         <InViewWrapper>
           <h2
             className={
-              dotgothic.className + " text-[70px] leading-none mb-[10vh]"
+              dotgothic.className + " text-[50px] md:text-[70px] leading-none mb-[10vh]"
             }
           >
             Works
@@ -155,7 +160,7 @@ export default function Home() {
       <section className="w-full block py-[100px] box relative mb-[100px]" id="experience">
         <InViewWrapper>
           <h2
-            className={`${dotgothic.className} text-[70px] leading-none mb-[10vh]`}
+            className={`${dotgothic.className} text-[50px] md:text-[70px] leading-none mb-[10vh]`}
           >
             Experience
           </h2>
@@ -163,7 +168,7 @@ export default function Home() {
         <div className="relative">
           {experiences.map((experience, index) => (
             <div
-              className="grid grid-cols-[11%_1fr_35%] gap-4 experience-item mb-9"
+              className="grid md:grid-cols-[11%_1fr_35%] gap-4 experience-item mb-9"
               key={index}
             >
               <div>
@@ -177,11 +182,11 @@ export default function Home() {
               </div>
               <div>
                 <InViewWrapper>
-                  <h4 className="italic text-[27px]">{experience.title}</h4>
+                  <h4 className="italic text-[27px] mt-9 md:mt-0 ">{experience.title}</h4>
                   <p className="text-[27px] italic font-light mb-2">
                     {experience.company}
                   </p>
-                  <p className="text-[17px] max-w-prose">
+                  <p className="text-[17px] max-w-prose mb-[50px] md:mb-0">
                     {experience.description}
                   </p>
                 </InViewWrapper>
