@@ -29,7 +29,7 @@ const experiences = [
     image: "/experience2.png",
   },
   {
-    year: "2020",
+    year: "2018",
     title: "Web Developer",
     company: "Spawoz, IN",
     description:
