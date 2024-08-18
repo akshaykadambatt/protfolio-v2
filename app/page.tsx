@@ -22,7 +22,7 @@ const experiences = [
   },
   {
     year: "2022",
-    title: "Full Stack Web Designer",
+    title: "Senior Full Stack Web Designer",
     company: "Ecesis, IN",
     description:
       "I developed full-stack applications using the MERN stack, focusing on creating smooth and user-friendly interfaces. Collaborated closely with designers and optimized backend processes, which made our apps faster and more scalable.",
@@ -30,7 +30,7 @@ const experiences = [
   },
   {
     year: "2018",
-    title: "Web Developer",
+    title: "Software Developer",
     company: "Spawoz, IN",
     description:
       "I helped develop web apps using React and Laravel, making sure they worked well across different devices. I also pitched in to resolve bugs and improve existing features, which cut down our open tickets significantly",
