@@ -7,6 +7,7 @@ import { useKeenSlider, KeenSliderPlugin } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import InViewWrapper from "./InViewWrapper";
+import Link from "next/link";
 
 const carousel: KeenSliderPlugin = (slider) => {
   let z = 600;
@@ -181,10 +182,13 @@ const SelectedImage: React.FC<ImageProps> = ({ year, name, img, link }) => {
         />
       </InViewWrapper>
       <InViewWrapper>
+        <Link href={link} target="_blank">
         <button className="py-2 px-4 rounded-lg mt-4">
           View Project{" "}
           <IoIosArrowRoundForward className="icon inline-block" size="30" />
         </button>
+        </Link>
+        
       </InViewWrapper>
     </div>
   );
