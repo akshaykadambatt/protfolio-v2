@@ -50,13 +50,6 @@ export default function Home() {
     <main className="overflow-visible">
       <section className="box pb-[100px] pt-[100px]">
         <InViewWrapper>
-        <div  className={`${dotgothic.className} marquee absolute top-[0px] right-[-0px] `}>
-          <div className="marquee-inner">
-          * DESIGN & DEVELOPMENT *
-          </div>
-          </div>
-        </InViewWrapper>
-        <InViewWrapper>
           <p className="text-[27px]">On the web since</p>
         </InViewWrapper>
         <InViewWrapper>
